@@ -1,0 +1,66 @@
+OOutput(1,1," OLE OS WAS NOT    SHUT  DOWN       PROPERLY.    PRESS ENTER TO   START OLE OS     ANTIVIRUS...")
+Pause
+For(X,1,250,1)
+End
+ClrHome
+prgmOLETITLE
+Output(3,1,"OLE OS UTILITIES ANTIVIRUS V1.0")
+For(X,1,100,1)
+getKey→Y
+If Y=105
+Goto QU
+End
+Output(6,5,"LOADING...")
+1→W
+prgmSCROLL
+ClrHome
+prgmOLETITLE
+0→W
+prgmSCROLL
+Output(3,2,"ANTIVIRUS V1.0  NOW OPENING   {--------------} 0     50   100")
+0→W
+prgmSCROLL
+Output(4,7,"SCANNING")
+For(X,1,100,1)
+End
+0→W
+For(X,2,15,1)
+prgmSCROLL
+Output(5,X,"*")
+End
+0→W
+prgmSCROLL
+Output(4,7,"DONE... ")
+prgmSCROLL
+ClrHome
+prgmOLETITLE
+0→W
+prgmSCROLL
+prgmOLETITLE
+Output(3,1,"OLE OS ANTIVIRUSRESULTS:         NO VIRUS FOUND")
+prgmSCROLL
+ClrHome
+prgmOLETITLE
+prgmSCROLL
+Output(3,3,"VIRUS  CHECK       COMPLETE.    CONTINUING TO   LOAD OLE OS...")
+1→W
+prgmSCROLL
+ClrHome
+prgmOLETITLE
+0→W
+prgmSCROLL
+Return
+Lbl QU
+ClrHome
+Output(1,1,"OLE OS ANTIVIRUS WAS CANCELLED.")
+Output(4,1,"SOME OLE OS 2000 FILES HAVE NOT   BEEN SCANNED    FOR VIRUSES.")
+Pause
+ClrHome
+Output(1,1,"EAGLESOFT HIGHLYRECOMMENDSUSINGTHE ANTIVIRUS IN   EAGLEMENU.")
+Output(6,2,"PRESS ENTER TO CONTINE LOADING    OLE OS...")
+Pause
+ClrHome
+prgmOLETITLE
+0→W
+prgmSCROLL
+Return

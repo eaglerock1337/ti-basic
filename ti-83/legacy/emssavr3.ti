@@ -1,0 +1,45 @@
+ClrHome
+0→Y
+randInt(2,7)→A
+randInt(2,15)→B
+Lbl RC
+randInt(-1,1)→C
+If C=0
+Goto RC
+Lbl RD
+randInt(-1,1)→D
+If D=0
+Goto RD
+0→E
+0→F
+Output(A,B,"*")
+While Y!=105
+A→E
+B→F
+A+C→A
+B+D→B
+If A=1
+1→C
+If A=8
+-1→C
+If B=1
+1→D
+If B=16
+-1→D
+If T=0
+Then
+Output(E,F," ")
+Else
+randInt(1,10)→G
+If G=10 and B>2
+Then
+Output(A,B,"*")
+B-1→B
+End
+End
+Output(A,B,"*")
+For(X,1,10,1)
+End
+getKey→Y
+End
+Return

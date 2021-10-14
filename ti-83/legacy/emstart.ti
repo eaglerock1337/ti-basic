@@ -1,0 +1,22 @@
+ClrHome
+prgmEMTITLE
+Output(3,3,"CHECKING FOR       OLE OS...")
+If ∟OLEOS(1)!=1
+Then
+3→W
+prgmSCROLL
+Output(5,2,"OLE OS HAS NOT  BEEN DETECTED.")
+0→W
+prgmSCROLL
+ClrHome
+Disp "","","","",""
+Output(1,1,"EAGLEMENU MUST  BE RUN IN OLE OSTO WORK.        RUN prgmAEAGLE  TO START OLE OS.")
+Stop
+End
+0→W
+prgmSCROLL
+Output(5,1,"OLE OS DETECTED-")
+prgmSCROLL
+Output(6,2,"NOW LOADING...")
+prgmSCROLL
+Return

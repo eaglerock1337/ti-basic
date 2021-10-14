@@ -1,0 +1,287 @@
+prgmAPPRUNNR
+ClrHome
+Output(2,3,"LIGHTSABERS!    VERSION 2.0")
+Output(5,3,"BY EAGLESOFT")
+Output(7,3,"PRESS  ENTER")
+Pause
+Lbl LB
+Menu("**LIGHTSABERS!**","NEW GAME",NG,"CONTINUE GAME",CG,"INSTRUCTIONS",IN,"ABOUT...",AB,"QUIT",EX)
+Lbl IN
+ClrHome
+Menu("INSTRUCTIONS","GAME PLOT",I1,"HOW TO PLAY",I2,"ATTACKS",I3,"GAME LEVELS",I4,"REQUIRED FILES",I5,"EXIT",LB)
+Lbl I1
+Output(1,1,"YOU ARE YOUNG    OBI-WAN KENOBI, ABOUT TO FIGHT  DARTH MAUL.")
+Pause
+ClrHome
+Output(1,1,"YOU MUST USE THE FORCE TO BEAT   HIM! NABOO AND  THE IMPERIAL   SENATE DEPEND   ON YOU!")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto IN
+Lbl I2
+Output(1,1,"TO DEFEAT DARTH  MAUL, YOU MUST  DEPLETE HIS     FORCE BY USING  YOUR FORCE TO   ATTACK HIM.")
+Pause
+ClrHome
+Output(1,1,"EVERY SWING OF   THE LIGTHSABER  REQUIRES HIM TO USE FORCE TO    BLOCK.")
+Pause
+ClrHome
+Output(1,1,"ALSO, HE CAN DO  THE SAME TO     DEPLETE YOUR    FORCE.")
+Pause
+ClrHome
+Output(1,1,"SO REMEMBER TO   USE YOUR FORCE  WISELY!")
+Output(6,1,"EXAMPLE:")
+Output(7,8,"YOU  HIM")
+Output(8,1,"FORCE: 1525 1499")
+Pause
+Goto IN
+Lbl I3
+Output(1,1,"YOU CAN USE MANY DIFFERENT       ATTACKS IN THE  BATTLE.")
+Pause
+ClrHome
+Output(1,1,"THE BASIC SWIPE  IS THE SIMPLEST MOVE.")
+Output(6,1,"FORCE USED:  0  EFFECTIVITY: 50 DAMAGE:      5")
+Pause
+Output(1,1,"THE FORCE SWIPE  USES THE FORCE  TO INCREASE THE EFFICIENCY TO   100 PERCENT.")
+Output(6,14,"2")
+Output(7,14,"100")
+Pause
+Output(1,1,"THE SUPER-ATTACK IS A SERIES OF  QUICK SWIPES    THAT ARE FUELED BY THE FORCE.")
+Output(6,14,"5")
+Output(7,14,"75 ")
+Output(8,14,"15")
+Pause
+Output(1,1,"THE JEDI ATTACK  IS UNIQUE TO    THE JEDI. OBI-  WAN USES THE   LIGHTSABER SPIN.")
+Output(6,14,"10")
+Output(7,14,"80")
+Output(8,14,"25")
+Pause
+Output(1,1,"THE STRONGEST     ATTACK IS THE   FORCE DRAIN. IT IS THE LEAST    EFFICIENT.     ")
+Output(6,14,"* ")
+Output(7,14,"10")
+Output(8,14,"* ")
+Pause
+ClrHome
+Output(1,1,"IF UNSUCCESSFUL, THE FORCE DRAIN COSTS YOU 20    FORCE. BUT A    SUCCESSFUL      DRAIN HAS A     TWOFOLD EFFECT.")
+Pause
+ClrHome
+Output(1,1,"YOU DO NOT USE   ANY FORCE, AND  YOU GAIN 50 OF  YOUR OPPONENTS  FORCE!")
+Pause
+ClrHome
+Output(1,1,"THIS ATTACK INFO IS IMPERATIVE   TO KNOW TO WIN  THE GAME.")
+Pause
+Goto IN
+Lbl I4
+Output(1,1,"LIGHTSABERS! HAS 5 GAME LEVELS.  HOWEVER, LEVELS INCREASE IN     AMOUNT OF FORCE YOU HAVE, NOT   DIFFICULTY.")
+Pause
+ClrHome
+Output(1,1,"LEVEL:")
+Output(4,1,"FORCE:")
+Output(2,2,"FORCE ATTUNED")
+Output(4,8,"500")
+Output(6,1,"THIS IS THE SAMEAS LUKE BEFORE HIS TRAINING")
+Pause
+Output(2,8,"SENSITIVE")
+Output(4,8,"1000")
+Output(7,9,"AFTER ")
+Pause
+Output(2,2,"JEDI APPRENTICE")
+Output(4,8,"2")
+Output(7,4,"YOUNG OBI-WANKENOBI      ")
+Pause
+Output(2,7,"KNIGHT    ")
+Output(4,8,"4")
+Output(7,4,"QUI-GON GINN       ")
+Pause
+Output(2,7,"MASTER")
+Output(4,8,"8")
+Output(7,4,"YODA AND OLD OBI-WAN KENOBI")
+Pause
+ClrHome
+Output(1,1,"REMEMBER, THE    LEVEL CHOOSES   THE GAME LENGTH AND NOT THE     DIFFICULTY!")
+Pause
+Goto IN
+Lbl I5
+Output(1,1,"REQUIRED FILES:")
+Output(3,2,"prgmLIGHTSAB")
+Output(4,2,"MATRIX [J]")
+Output(5,2,"List ∟JEDI")
+Output(7,3,"PRESS  ENTER")
+Pause
+Goto IN
+Lbl AB
+ClrHome
+Output(2,3,"LIGHTSABERS!    VERSION 1.0")
+Output(5,4,"COMPLETED:")
+Output(6,5,"4/13/00")
+Output(8,3,"PRESS  ENTER")
+Pause
+Output(3,11,"2")
+Output(6,5," 5/5")
+Pause
+Goto LB
+Lbl NG
+Menu("CHOOSE LEVEL:","FORCE ATTUNED",L1,"FORCE SENSITIVE",L2,"APPRENTICE",L3,"JEDI KNIGHT",L4,"JEDI MASTER",L5,"CANCEL",LB)
+Lbl L1
+500→∟JEDI(1)
+500→∟JEDI(2)
+Goto FO
+Lbl L2
+1000→∟JEDI(1)
+1000→∟JEDI(2)
+Goto FO
+Lbl L3
+2000→∟JEDI(1)
+2000→∟JEDI(2)
+Goto FO
+Lbl L4
+4000→∟JEDI(1)
+4000→∟JEDI(2)
+Goto FO
+Lbl L5
+8000→∟JEDI(1)
+8000→∟JEDI(2)
+Lbl FO
+Menu("CHOOSE DISPLAY","ALL FORCE",F1,"OBI-WAN ONLY",F2,"NO FORCE",F3)
+Lbl F1
+0→∟JEDI(3)
+Goto CG
+Lbl F2
+1→∟JEDI(3)
+Goto CG
+Lbl F3
+2→∟JEDI(3)
+Lbl CG
+If ∟JEDI(1)<0
+Goto LO
+If ∟JEDI(2)<0
+Goto WIN
+While 1=1
+Lbl ME
+Menu("WHICH ATTACK?")"SWIPE       -0",A1,"FORCE SWIPE -2",A2,"SUPER ATTACK-5",A3,"JEDI TRICK -10",A4,"FORCE DRAIN-20",A5,"QUIT",LB)
+Lbl A1
+1→A
+Goto AT
+Lbl A2
+2→A
+Goto AT
+Lbl A3
+3→A
+Goto AT
+Lbl A4
+4→A
+Goto AT
+Lbl A5
+5→A
+Lbl AT
+If [J](A,1)>∟JEDI(1)
+Goto ME
+ClrHome
+If ∟JEDI(3)!=2
+Then
+Output(8,1,"FORCE:          ")
+Output(8,8,∟JEDI(1))
+If ∟JEDI(3)!=1
+Output(8,13,∟JEDI(2))
+End
+If A=1
+Output(1,1,"YOU SWING YOUR   LIGHTSABER...")
+If A=2
+Output(1,1,"YOU DO A FORCE   SWIPE...")
+If A=3
+Output(1,1,"YOU DO A SUPER-  ATTACK!")
+If A=4
+Output(1,1,"YOU SPIN YOUR    LIGHTSABER!!")
+If A=5
+Output(1,1,"YOU ATTEMPT THE  FORCE DRAIN...")
+For(X,1,100,1)
+End
+∟JEDI(1)-[J](A,1)→∟JEDI(1)
+rand→B
+If B>[J](A,2)
+Then
+Output(3,2,"...BUT FAIL!")
+Else
+Output(3,2,"...AND SUCCEED!")
+∟JEDI(2)-[J](A,3)→∟JEDI(2)
+If A=5
+∟JEDI(1)+70→∟JEDI(1)
+End
+If ∟JEDI(3)!=2
+Then
+Output(8,9,"        ")
+Output(8,8,∟JEDI(1))
+If ∟JEDI(3)!=1
+Output(8,13,∟JEDI(2))
+End
+If ∟JEDI(2)<100
+Then
+If ∟JEDI(3)=2
+Output(8,1,"LOW FORCE DARTH")
+If ∟JEDI(3)=1
+Output(8,13,"LOW")
+End
+For(X,1,150,1)
+End
+If ∟JEDI(2)<0
+Goto WI
+Lbl RA
+randInt(1,5)→C
+If [J](C,1)>∟JEDI(2)
+Goto RA
+If C=1
+Output(5,1,"DARTH MAUL DOES  A SWIPE...")
+If C=2
+Output(5,1,"DARTH MAUL FORCE SWIPES...")
+If C=3
+Output(5,1,"DARTH DOES A     SUPER-ATTACK...")
+If C=4
+Output(5,1,"DARTH DOUBLE-    JABS AT YOU!!")
+If C=5
+Output(5,1,"DARTH TRIES THE  FORCE DRAIN...")
+For(X,1,100,1)
+End
+∟JEDI(2)-[J](C,1)→∟JEDI(2)
+rand→D
+If (D-.1)>[J](C,2)
+Then
+Output(7,2,"...BUT FAILS!")
+Else
+Output(7,2,"...SUCCESS!")
+∟JEDI(1)-[J](C,3)→∟JEDI(1)
+If C=5
+∟JEDI(2)+70→∟JEDI(2)
+End
+If ∟JEDI(3)!=2
+Then
+Output(8,9,"        ")
+Output(8,8,∟JEDI(1))
+If ∟JEDI(3)!=1
+Output(8,13,∟JEDI(2))
+End
+If ∟JEDI(1)<100 and ∟JEDI(3)=2
+Output(8,1,"LOW FORCE OBIWAN")
+If ∟JEDI(2)<100 and ∟JEDI(3)=1
+Output(8,13,"LOW")
+For(X,1,250,1)
+End
+If ∟JEDI(1)<0
+Goto LO
+End
+Lbl WI
+ClrHome
+Output(1,1,"DARTH IS KNOCKEDDOWN!  YOU SWINGYOUR LIGHTSABER AND WATCH HIM   FALL DOWN THE   PIT... IN TWO.")
+Output(8,3,"PRESS ENTER!")
+Pause
+Goto LB
+Lbl LO
+ClrHome
+Output(1,1,"OH, NO!  HE IS  TOO TOUGH!  ALL YOU SEE IS HIS  RED LIGHTSABER  AS YOU FALL DOWNTHE PIT...")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto LB
+Lbl EX
+ClrHome
+Output(2,5,"MAY  THE        FORCE BE        WITH YOU...      ALWAYS...")
+Output(7,7,"OLE!")
+Pause
+ClrHome
+Return

@@ -1,0 +1,133 @@
+prgmAPPRUNNR
+ClrHome
+Output(2,4,"ARMAGEDDON!     VERSION 2.1")
+Output(5,3,"BY EAGLESOFT")
+Output(7,3,"PRESS  ENTER")
+Pause
+ClrHome
+Output(2,1,"NOW YOU DID IT!  YOU HAVE JUST   STARTED THE     TIMER TO        ARMAGEDDON!!")
+Pause
+ClrHome
+Output(2,1,"TRY TO FIND THE  SECRET KEY TO   STOP THE TIMER  BEFORE THE      WORLD BLOWS UP!")
+Pause
+ClrHome
+Output(2,1,"OH, BY THE WAY,  IT IS NOT JUST  PRESSING THE    ON KEY!!")
+Pause
+ClrHome
+Output(1,1,"P.S...  YOU      REALLY DO NOT   HAVE AS MUCH    TIME AS YOU     APPEAR TO HAVE. HAVE FUN!!!")
+Output(8,2,"PRESS  ENTER")
+Pause
+ClrHome
+Output(3,3,"COUNTDOWN TO    ARMAGEDDON...")
+0→C
+0→D
+0→E
+0→F
+0→G
+0→H
+For(X,1,1000000000,275862)
+Output(5,5,"          ")
+Output(5,5,1000000000-X)
+getKey→D
+If D=34
+Then
+X+50000000→X
+C+5→C
+1→F
+End
+If D=25
+Then
+X+250000000→X
+C+25→C
+1→F
+End
+If D=71 and C!=0
+Then
+X-50000000→X
+C-5→C
+1→F
+End
+If F!=0
+Then
+Output(7,2,"DOWN    PCT...")
+Output(7,2,C)
+End
+If D=95 and H!=10
+Then
+If G=0
+Then
+H-10→H
+Output(8,7,"    ")
+Output(8,7,H)
+X-100000000→X
+Output(2,1,"  TIMER BONUS!  ")
+Else
+If G=1
+Then
+Output(2,1,"BONUS USED UP...")
+Else
+If G=2
+Then
+Output(2,1," USED UP, DUMMY ")
+Else
+Output(2,2," DUMMY X    ! ")
+Output(2,11,G+1)
+End
+End
+End
+G+1→G
+Else
+If D=95
+Then
+Output(2,1,"STO 25X, THEN +!")
+End
+End
+If D=45
+Then
+Output(1,1,"STOPPED     PCT!")
+Output(1,9,E)
+End
+If D=91
+Then
+E+1→E
+H+.9→H
+X+9000000→X
+Output(1,9,E)
+Output(8,2,"DOWN      PCT!")
+Output(8,7,H)
+End
+If E=100
+Then
+Goto OK
+End
+0→D
+0→F
+End
+ClrHome
+Output(4,6,"BOOM...")
+Pause
+ClrHome
+Output(1,1,"SO... WERE YOU   EXPECTING SOME  GIANT ENDING?   AFTER ALL, IT   IS THE END OF   THE WORLD!!")
+Output(8,5,"SHEESH!!")
+Pause
+Goto BY
+Lbl OK
+Output(5,1,"TIMER STOPPED...")
+Output(7,1,"THE WORLD IS OK!GOOD JOB, SLICK!")
+Pause
+ClrHome
+Output(1,1,"ARMAGEDDON! V1.0")
+Output(3,3,"BY EAGLESOFT")
+Output(5,4,"COMPLETED:")
+Output(6,5,"1/10/00")
+Output(8,3,"PRESS  ENTER")
+Pause
+Output(1,14,"2")
+Output(6,8,"4")
+Pause
+Output(1,16,"1")
+Output(6,5,"2/28")
+Pause
+Lbl BY
+ClrHome
+Return

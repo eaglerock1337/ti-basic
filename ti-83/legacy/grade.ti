@@ -1,0 +1,24 @@
+prgmAPPRUNNR
+ClrHome
+Output(2,3,"GRADE SOLVER")
+Output(3,7,"2000")
+Output(5,3,"BY EAGLESOFT")
+Output(7,3,"PRESS  ENTER")
+Pause
+Lbl BA
+ClrHome
+1→A
+Disp "MAXIMUM SCORE?")
+Input X
+If X=0
+Goto BA
+Repeat A=0
+Input "GRADE(0 TO QUIT)",AB
+(A/X)*100→B
+Disp B
+End
+ClrHome
+Output(2,4,"THANKS FOR     USING PETERS    GRADE SOLVER        2000                            OLE!")
+Pause
+ClrHome
+Return

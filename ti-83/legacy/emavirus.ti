@@ -1,0 +1,45 @@
+prgmAPPRUNNR
+ClrHome
+Output(2,1,"OLE OS EAGLEMENU ANTIVIRUS V1.0")
+Output(5,2,"PRESS ENTER TO  SCAN OLE OS...")
+Pause
+0→W
+prgmSCROLL
+ClrHome
+prgmEMAVTITL
+Output(3,2,"NOW OPENING   FILE {--------}TOTAL:{--------}       0    100")
+prgmSCROLL
+Output(3,7,"SCANNING")
+For(A,8,15,1)
+For(B,1,6,1)
+Output(4,8,"--------")
+For(C,8,15,1)
+Output(4,C,"*")
+For(D,1,3,1)
+End
+End
+End
+Output(5,A,"*")
+End
+Output(3,7,"DONE... ")
+1→W
+prgmSCROLL
+ClrHome
+prgmEMAVTITL
+0→W
+prgmSCROLL
+Output(3,1,"VIRUSES FOUND:  VIRUSES FIXED:  DAMAGED FILES:")
+prgmSCROLL
+For(X,3,5,1)
+Output(X,16,"0")
+For(Y,1,50,1)
+End
+Output(6,3,"PRESS  ENTER")
+Pause
+prgmSCROLL
+ClrHome
+prgmEMAVTITL
+Output(3,4,"VIRUS SCAN       COMPLETE.     RETURNING TO    EAGLEMENU...")
+prgmSCROLL
+ClrHome
+Return

@@ -1,0 +1,13 @@
+ClrHome
+0→Y
+While Y!=105
+rand→A
+randInt(1,8)→B
+randInt(1,13)→C
+Output(A,B,"OLE!")
+For(X,1,250,1)
+End
+getKey→Y
+Output(A,B,"    ")
+End
+Return

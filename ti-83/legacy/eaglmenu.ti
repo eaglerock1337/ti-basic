@@ -1,0 +1,52 @@
+prgmEMSTART
+ClrHome
+Output(1,1,"*****************  WELCOME TO  **EAGLEMENU V2.0*****************")
+Output(5,1,"OLE 2K FOREVER!!")
+Pause
+Output(7,7,"OLE!")
+Pause
+Lbl EM
+ClrHome
+Menu("***EAGLEMENU!***","PROGRAMS",EP,"ANTIVIRUS",AV,"FLY!",SS,"ABOUT...",AB,"EXIT",EX)
+Lbl EP
+Menu("PROGRAMS","STOCKS 2000",ST,"ARMAGEDDON!",AR,"LIGHTSABERS!",LI,"GRADE SOLVER",GR,"EXIT",EM)
+Lbl ST
+prgmSTOCKS
+Goto EP
+Lbl AR
+prgmARMAGEDD
+Goto EP
+Lbl LI
+prgmLIGHTSAB
+Goto EP
+Lbl GR
+prgmGRADE
+Goto EP
+Lbl AV
+prgmEMAVIRUS
+Goto EM
+Lbl SS
+prgmEMSSAVER
+Goto EM
+Lbl AB
+ClrHome
+Output(1,2,"EAGLEMENU V1.0  AN OLE OS 2000  PROGRAM SHELL!")
+Output(5,4,"COMPLETED:")
+Output(6,5,"2/28/00")
+Output(8,3,"PRESS  ENTER")
+Pause
+ClrHome
+Output(1,1,"*LATER VERSIONS*----------------VER 2.0  3/ 1/00VER 2.1  4/17/00")
+Pause
+Goto EM
+Lbl EX
+ClrHome
+For(X,1,200,1)
+End
+prgmEMTITLE
+Output(4,2,"SHUTTING DOWN    EAGLEMENU...")
+0→W
+prgmSCROLL
+Output(4,2," RETURNING TO   OLELAND 2000...")
+prgmSCROLL
+Return

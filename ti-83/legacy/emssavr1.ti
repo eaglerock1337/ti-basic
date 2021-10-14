@@ -1,0 +1,15 @@
+ClrHome
+0→Y
+While Y!=105
+rand→A
+randInt(1,8)→B
+randInt(1,16)→C
+If A>.5
+Then
+Output(B,C,"*")
+Else
+Output(B,C," ")
+End
+getKey→Y
+End
+Return

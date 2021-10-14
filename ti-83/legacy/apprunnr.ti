@@ -1,0 +1,36 @@
+ClrHome
+Output(1,1,"OLE OS APPRUNNER----------------")
+Output(7,1,"----------------       *********")
+For(X,1,50,1)
+End
+Output(3,1,"CHECK PRGM-  - CHECK OLE OS- - OPENING FILE- - RUNNING FILE- -")
+For(X,1,100,1)
+End
+Output(3,15,"?")
+For(X,1,150,1)
+End
+Output(3,15,"*")
+Output(4,15,"?")
+If ∟OLEOS(1)=0
+Goto NO
+For(X,1,250,1)
+End
+Output(4,15,"*")
+Output(5,15,"?")
+For(X,1,100,1)
+End
+Output(5,15,"*")
+Output(6,15,"?")
+For(X,1,150,1)
+End
+Output(6,15,"*")
+For(X,1,75,1)
+End
+ClrHome
+For(X,1,150,1)
+End
+Return
+Lbl NO
+For(X,1,1200,1)
+End
+Output(4,15,"X")

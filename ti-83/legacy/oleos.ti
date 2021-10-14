@@ -1,0 +1,42 @@
+ClrHome
+Output(2,1,"OLE OS 2000 V1.1")
+Output(4,3,"PRESS  ENTER      TO START        OLE OS...")
+Pause
+For(X,1,100,1)
+getKey→A
+If A=105
+Goto BY
+End
+0→W
+prgmSCROLL
+ClrHome
+prgmOLETITLE
+prgmSCROLL
+If ∟OLEOS(1)=1
+prgmOLEVIRUS
+Output(4,4,"PREPARING")
+Output(5,4,"TO LOAD...")
+prgmSCROLL
+Output(4,4,"         ")
+Output(5,4,"          ")
+prgmSCROLL
+Output(3,1,"OLE DRIVER:  0  OLE SHELL:   0  OLELAND:     0  EAGLEMENU:   0  ")
+prgmSCROLL
+For(X,1,4,1)
+For(Y,1,99,1)
+Output(2+X,14,Y)
+End
+Output(2+X,13,"DONE")
+For(Z,1,250,1)
+End
+End
+1→W
+prgmSCROLL
+ClrHome
+0→W
+prgmOLETITLE
+prgmSCROLL
+Output(3,5,"STARTING      OLELAND 2000      PROGRAM          SHELL...")
+prgmSCROLL
+Lbl BY
+Return

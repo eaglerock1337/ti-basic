@@ -1,0 +1,29 @@
+1→K
+8→L
+0→M
+Output(7,1,"----------------       *********")
+While M<=W
+If L>=8
+Then
+Output(8,K,"*")
+K+1→K
+Else
+If K>8
+Then
+Output(8,K,"*")
+K+1→K
+End
+End
+If L<=16
+Output(8,L," ")
+If L=7
+M+1→M
+L+1→L
+If K=17
+1→K
+If L=17
+Then
+1→L
+End
+End
+Return

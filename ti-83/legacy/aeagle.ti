@@ -1,0 +1,162 @@
+ClrHome
+prgmOLEOS
+1→∟OLEOS(1)
+ClrHome
+Output(1,1,"***************** OLELAND 2000 ** VERSION 1.1 *****************   WELCOME TO       OLELAND!")
+Output(8,1,"OLE 2K FOREVER!!")
+Pause
+ClrHome
+Output(1,1,"OOOO L    EEEE !O  O L    E    !O  O L    E    !O  O L    E    !O  O L    EEE  !O  O L    E    !O  O L    E    !O  O L    E     OOOO LLLL EEEE !")
+Pause
+ClrHome
+Output(2,6,"OLE 2K        IS FINALLY        HERE!!")
+Pause
+Output(6,4,"LONG  LIVE         OLE!")
+Pause
+Lbl OL
+Menu("**OLELAND 2000**","EAGLEMENU 2.0",EM,"MEET OLESOFT",MO,"OUR PROGRAMS",OP,"PROGRAMS TO BE",FP,"CREDITS",CR,"ABOUT...",AB,"GO BYE",EX)
+Lbl EM
+prgmEAGLMENU
+Goto OL
+Lbl MO
+Output(1,1,"***OLESOFT IS****              **   PETER M.   **              **  EAGLESOFT   **              ** ON THE TI-83 *****************")
+Pause
+Output(3,5,"MATT  E")
+Output(5,4,"METAL")
+Output(7,14,"5")
+Pause
+Output(3,5,"ANDY  L")
+Output(5,4," ANDY")
+Output(7,14,"9")
+Pause
+ClrHome
+Output(1,1,"*****************")
+Output(2,16,"**")
+Output(3,5,"OLESOFT    **  WILL  LIVE  **   FOREVER!   **")
+Output(6,16,"**")
+Output(7,16,"*****************")
+Pause
+Output(6,7,"OLE!")
+Pause
+ClrHome
+Output(2,3,"*** *   *** *   * * *   *   *   * * *   ** *   * * *   *       *** *** *** *")
+Pause
+Output(8,2,"OLE 2K FOREVER!")
+Pause
+Goto OL
+Lbl OP
+Menu("OLESOFT PROGRAMS:","BY EAGLESOFT",PE,"BY METALSOFT",PM,"BY ANDYSOFT",PA,"GOOD BYE",OL)
+Lbl PE
+ClrHome
+Output(1,1,"BY EAGLESOFT:")
+Output(3,1,"OLE OS 2000 V1.0OLELAND 2000V1.1EAGLEMENU V2.0  OLE OS APPRUNNEROLE OS UTILITIES ANTIVIRUS")
+Pause
+ClrHome
+Output(1,1,"BY EAGLESOFT:")
+Output(3,1,"EM ANTIVIRUS    FLY! V2.0       STOCKS 2000 V3.0ARMAGEDDON! V2.1GRADESOLVER 2000")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto OP
+Lbl PM
+ClrHome
+Output(1,1,"BY METALSOFT:")
+Output(3,1,"OLE-OS 85 V1.1  METAL MANG. V1.0METAL MENU V4.4 MINE FIELD V1.2 GRADE CALCULATORQUADRATIC FORM.")
+Pause
+ClrHome
+Output(1,1,"BY METALSOFT:")
+Output(3,1,"DISTANCE FORMULAPYTHAG. THEOREM LAW OF SINES    LAW OF COSINES  TRIANGLE AREA   BUSY PROGRAM")
+Pause
+Goto OP
+Lbl PA
+ClrHome
+Output(1,1,"BY ANDYSOFT:")
+Output(3,1,"ANDYSOFT IS      REPROGRAMMING.  KEEP WATCHING!")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto OP
+Lbl FP
+Menu("COMING PROGRAMS!","BY EAGLESOFT",FE,"BY METALSOFT",FM,"BY ANDYSOFT",FA,"GOOD BYE",OL)
+Lbl FE
+ClrHome
+Output(1,1,"COMING SOON...  FROM EAGLESOFT:")
+Output(4,1,"NOTHING RIGHT   NOW...")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto FP
+Lbl FM
+ClrHome
+Output(1,1,"COMING SOON...  FROM METALSOFT:")
+Output(4,1,"NEW GAME (TBA)")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto FP
+Lbl FA
+ClrHome
+Output(1,1,"COMING SOON...  FROM ANDYSOFT:")
+Output(4,1,"THE REPROGRAMMED DRUGWARZ!      THE NEW OS FOR   THE TI-89 (TBA)")
+Output(8,3,"PRESS  ENTER")
+Pause
+Goto FP
+Lbl CR
+ClrHome
+Output(1,1,"OLESOFT  CREDITS----------------")
+Output(3,3,"OLESOFT  WAS     FOUNDED BY:")
+Output(6,5,"PETER M.")
+Pause
+Output(3,1,"GAME SHELL IDEA:    MATT  E.    OLE OS IDEA:  ")
+Output(7,1,"ANTIVIRUS IDEA:     PETER M.")
+Pause
+Output(3,1,"SCREENSAVER IDEA BY PETER M.                     OLELAND SHELL  AND EAGLEMENU:     PETER M.")
+Pause
+Output(3,1,"SCROLL ALGORITHMPROGRAMMED BY:      MATT  E.                   ")
+0→W
+prgmSCROLL
+Pause
+ClrHome
+Output(3,5,"WE MAKE      OLESOFT WHAT      IT IS...")
+Pause
+Output(7,7,"OLE!")
+Pause
+Goto OL
+Lbl AB
+ClrHome
+Output(1,3,"OLELAND 2000   PROGRAM  SHELL   VERSION 1.0")
+Output(5,4,"COMPLETED:")
+Output(6,5,"2/28/00")
+Output(8,3,"PRESS  ENTER")
+Pause
+ClrHome
+Output(1,1,"*LATER VERSION*----------------VER 1.1  3/ 1/00")
+Output(8,3,"PRESS ENTER")
+Pause
+Goto OL
+Lbl EX
+ClrHome
+For(X,1,250,1)
+End
+prgmOLETITLE
+Output(3,3,"PLEASE  WAIT    WHILE OLE OS    SHUTS DOWN...")
+For(X,1,1500,1)
+End
+ClrHome
+For(X,1,300,1)
+End
+Output(3,4,"IT IS NOW      SAFE TO EXIT      OLE OS.")
+Pause
+ClrHome
+0→∟OLEOS(1)
+Stop
+1→W
+prgmSCROLL
+ClrHome
+prgmOLETITLE
+0→W
+prgmSCROLL
+Output(3,2,"OLE OS WAS NOT      DETECTED.   RUN THIS PROGRAM   IN OLE OS.")
+Pause
+0→W
+prgmSCROLL
+ClrHome
+Disp "","","",""
+Output(1,1,"RUN prgmAEAGLE  TO START OLE OS AND RUN YOUR    PROGRAMS.")
+Stop

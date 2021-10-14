@@ -1,0 +1,51 @@
+prgmAPPRUNNR
+ClrHome
+prgmEMTITLE
+Output(3,3,"FLY! VER 2.0")
+Output(5,2,"THE EAGLEMENU    SCREENSAVER!")
+Output(8,3,"PRESS  ENTER")
+Pause
+Lbl SS
+Menu("FLY! SCREENSAVER","RANDOM FLY",RF,"FILL SCREEN",FS,"FLYING OLE!",FO,"RICOHET STAR",RS,"RICOCHET PEN",RP,"EXIT",EX)
+Lbl RF
+ClrHome
+randInt(1,4)→X
+If X=1
+Goto FS
+If X=2
+Goto FO
+If X=3
+Goto RS
+If X=4
+Goto RP
+Lbl FS
+prgmEMSSAVR1
+Goto SS
+Lbl FO
+prgmEMSSAVR2
+Goto SS
+Lbl RS
+0→T
+prgmEMSSAVR3
+Goto SS
+Lbl RP
+1→T
+prgmEMSSAVR3
+Goto SS
+Lbl AB
+ClrHome
+Output(2,4,"FLY!  V1.0")
+Output(4,4,"COMPLETED:")
+Output(5,6,"3/1/00")
+Output(7,3,"PRESS  ENTER")
+Pause
+Output(2,11,"2")
+Output(5,8,"3")
+Pause
+Goto SS
+Lbl EX
+ClrHome
+prgmEMTITLE
+Output(3,2,"THANK YOU FOR     USING FLY!      RETURNING TO    EAGLEMENU...")
+prgmSCROLL
+Return
