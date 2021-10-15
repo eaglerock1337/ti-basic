@@ -1,0 +1,596 @@
+prgmAPPRUNNR
+ClrHome
+Normal
+Float
+Output(2,3,"STOCKS  2000")
+Output(3,3,"VERSION  3.0")
+Output(5,3,"BY EAGLESOFT")
+Output(7,3,"PRESS  ENTER")
+Pause
+ClrHome
+Output(2,3,"REMEMBER ...")
+Pause
+Output(4,3,"OLE 2K SHALL   LIVE FOREVER!!")
+Pause
+Output(7,7,"OLE!")
+Pause
+Lbl ST
+Menu("STOCKS 2000","START NEW GAME",SG,"CONTINUE GAME",LG,"MEM MANAGEMENT",MM,"INSTRUCTIONS",IN,"ABOUT STOCKS",AS,"QUIT",EX)
+Lbl IN
+ClrHome
+Menu("INSTRUCTIONS","WHAT IS STOCKS",I1,"HOW TO WIN",I2,"STOCK PRICES",I3,"STOCK CHANGES",I4,"REQUIRED FILES",I5,"EXIT",ST)
+Lbl I1
+ClrHome
+Output(1,1,"STOCKS 2000 IS  REALLY SIMPLE-  JUST BUY LOW,   SELL HIGH.")
+Pause
+ClrHome
+Output(1,1,"BUY ON YOUR     WHIM TO GAIN    MONEY IN A 20   DAY PERIOD.")
+Pause
+ClrHome
+Output(1,1,"JUST REMEMBER,  THE STOCK FLUX  IS COMPLETELY   RANDOM...SO     HAVE FUN!!")
+Output(7,3,"PRESS  ENTER")
+Pause
+Goto IN
+Lbl I2
+ClrHome
+Output(1,1,"BELIEVE IT OR   NOT, THERE IS   SOMETHING TO WININ STOCKS!")
+Pause
+ClrHome
+Output(1,1,"AFTER EVERY GAMEYOU PLAY, YOU   ARE EVALUATED.  IF YOU GET THE  BEST EVALUATION OF STOCKS...")
+Pause
+ClrHome
+Output(1,1,"...YOU WIN!!")
+Pause
+Output(3,1,"YOU WILL GET A  SECRET WAY TO   PROCEED TO THE  NEXT LEVEL!")
+Pause
+ClrHome
+Output(1,1,"EVENTUALLY, WHENYOU BEAT ALL OF THE LEVELS, YOU WILL LEARN COOL EFFECTS FOR     STOCKS!")
+Output(8,4,"GOOD LUCK!")
+Pause
+Goto IN
+ClrHome
+Output(1,1,"STARTING PRICES COMPUTER-150-200ELECTR.- 100-120CLOTHING-  40-60MEDICAL-   20-40AGRICULT.- 10-15  PRESS  ENTER")
+Pause
+Goto IN
+Lbl I4
+ClrHome
+Output(1,1,"STOCK FLUXUATIONCOMPUTERS-  +-20ELECTRICAL- +-10CLOTHING-    +-6MEDICAL-     +-5AGRICULTURE- +-2  PRESS  ENTER")
+Pause
+Goto IN
+Lbl I5
+ClrHome
+Output(1,1,"REQUIRED FILES:")
+Output(3,2,"prgmSTOCKS      prgmAEAGLE      prgmAPPRUNNR")
+Output(7,3,"PRESS  ENTER")
+Pause
+Output(3,2,"MATRIX [A]      MATRIX[B]      MATRIX[C]  ")
+Pause
+Output(3,2,"LIST ∟STOCK     LIST ∟SAVE1     LIST ∟SAVE2")
+Pause
+ClrHome
+Output(2,1,"NOTE: STOCKS     WILL NOT RUN    OUTSIDE OF      EAGLEMENU.")
+Output(7,3,"PRESS  ENTER")
+Pause
+Goto IN
+Lbl AS
+ClrHome
+Output(1,4,"STOCKS 1.0")
+Output(3,1,"PREMIERE VERSION")
+Output(4,4,"OF STOCKS!")
+Output(6,4,"COMPLETED:")
+Output(7,4,"3/5-3/9/99")
+Pause
+ClrHome
+Output(3,4,"COMPLETED:")
+Output(4,5,"3/10/99")
+Output(6,2,"UPDATED  SCORE      SYSTEM")
+Pause
+Output(1,11,"2.0")
+Output(4,7,"3")
+Output(6,2,"  ADDED NET     WORTH DISPLAY")
+Pause
+Output(1,13,"1")
+Output(4,5,"11/13/99")
+Output(6,1,"IMPROVED OUTPUT,  LOOPING, AND    SCORE SYSTEM")
+Pause
+Output(1,11,"3.0")
+Output(4,8,"19/99")
+Output(6,1,"HIGHLY IMRPVOED  TRADING SYSTEM               ")
+Pause
+Output(1,11,"4")
+Output(4,6,"2/2/99 ")
+Output(6,1,"NEW TOUGH MODES   AND CHEATS!  ")
+Pause
+ClrHome
+Output(1,3,"STOCKS  2000")
+Output(2,3,"VERSION  1.0")
+Output(4,4,"COMPLETED:")
+Output(5,5,"12/21/99")
+Output(7,3,"SAVE FEATURE       ADDED")
+Pause
+Output(2,12,"2")
+Output(5,9,"6")
+Output(7,3,"OLE OS ADDED            ")
+Pause
+Output(2,14,"1")
+Output(5,5," 1/6/00 ")
+Output(7,2,"MEMORY  REPORT      ADDED")
+Pause
+Output(2,14,"2")
+Output(5,5,"1/17")
+Output(7,2,"   GENERAL       MODIFICATION")
+Pause
+Output(2,12,"3.0")
+Output(5,5,"2/28")
+Output(7,2,"IMPROVED  CODE    EFFICIENCY  ")
+Pause
+Goto ST
+Lbl MM
+Menu("MEM MANAGEMENT","SAVE GAME",SF,"LOAD GAME",LF,"EXIT",ST)
+Lbl SF
+Menu("SAVE IN FILE:","SLOT 1",SB,"SLOT 2",SC,"CANCEL",MM)
+Lbl SB
+If ∟SAVE1(6)!=0
+Then
+Menu("OVERWRITE FILE?","YES",Y1,"NO",MM)
+End
+Lbl Y1
+∟STOCK→∟SAVE1
+[A]→[B]
+ClrHome
+Output(3,4,"GAME SAVED      IN SLOT 1.")
+Output(6,3,"PRESS  ENTER    TO CONTINUE.")
+Pause
+Goto MM
+Lbl SC
+If ∟SAVE2(6)!=0
+Then
+Menu("OVERWRITE FILE?","YES",Y2,"NO",MM)
+End
+Lbl Y2
+∟STOCK→∟SAVE2
+[A]→[C]
+ClrHome
+Output(3,4,"GAME SAVED      IN SLOT 2.")
+Output(6,3,"PRESS  ENTER    TO CONTINUE.")
+Pause
+Goto MM
+Lbl LF
+Menu("LOAD GAME:","SLOT 1",LB,"SLOT 2",LC,"CANCEL",MM)
+Lbl LB
+If [B](1,1)=0
+Then
+ClrHome
+Output(3,6,"SLOT 1         IS EMPTY")
+Output(6,3,"PRESS  ENTER    TO CONTINUE.")
+Pause
+Goto MM
+End
+If ∟SAVE1(6)=0
+Menu("CLEAR CURR GAME?","YES",Y3,"NO",MM)
+Else
+Goto Y3
+End
+Lbl Y3
+∟SAVE1→∟STOCK
+[B]→[A]
+Goto LG
+Lbl LC
+If [C](1,1)=0
+Then
+ClrHome
+Output(3,6,"SLOT 2         IS EMPTY")
+Output(6,3,"PRESS  ENTER    TO CONTINUE.")
+Pause
+Goto MM
+End
+If ∟SAVE2(6)=0
+Menu("CLEAR CURR GAME?","YES",Y4,"NO",MM)
+Else
+Goto
+End
+Lbl Y4
+∟SAVE2→∟STOCK
+[C]→[A]
+Goto LG
+Lbl SG
+If ∟STOCK(6)=0
+Menu("ERASE CURR GAME?","YES",YE,"NO",MM)
+Else
+Goto YE
+End
+Lbl YE
+ClrHome
+Output(3,3,"INITIALIZING")
+0→∟STOCK(3)
+0→∟STOCK(4)
+0→∟STOCK(5)
+0→∟STOCK(6)
+For(X,1,50,1)
+getKey→C
+If C=11
+Then
+1→∟STOCK(3)
+Output(4,5,"CHEATER!")
+End
+If C=15
+Then
+1→∟STOCK(4)
+Output(5,2,"WELCOME TO THE  EXPERT VERSION   OF STOCKS...")
+End
+If C=45
+Then
+3→∟STOCK(4)
+Output(5,2,"WELCOME TO THE  MASTER VERSION   OF STOCKS...")
+End
+If C=44
+Then
+1→∟STOCK(5)
+Output(1,1,"WELCOME, MASTER!")
+End
+If C=55
+Then
+-(49/50)→∟STOCK(4)
+Output(5,2," FREE-TRADING     VERSION...      HAVE FUN!  ")
+End
+End
+2000(1+∟STOCK(3))→∟STOCK(1)
+1→∟STOCK(2)
+For(X,1,5,1)
+[A](X,1)*(-1-∟STOCK(3))→[A](X,2)
+End
+For(X,1,5,1)
+For(Y,3,5,1)
+0→[A](X,Y)
+End
+End
+For(X,1,5,1)
+randInt([A](X,6),[A](X,7))→[A](X,3)
+End
+Lbl LG
+If ∟STOCK(5)=1
+Then
+ClrHome
+Output(2,3,"WELCOME BACK!")
+Output(4,3,"TIME 2 STRUT     YOUR STUFF!")
+Output(7,3,"PRESS  ENTER")
+Pause
+End
+While ∟STOCK(2)<=20/(1+∟STOCK(4))
+Lbl MP
+Menu("STOCKTRADER 2000","DISP PRICES",DS,"DISP CHANGES",DC,"DISP HOLDINGS",DH,"TRADE STOCK",TS,"DISP ACCOUNT",DA,"END TRADE DAY",ED,"QUIT",ST)
+Lbl DS
+ClrHome
+Disp ∟STOCK(2)
+Output(1,1,"PRICES    DAY")
+3→B
+Goto OP
+Lbl DC
+ClrHome
+Disp ∟STOCK(2)
+Output(1,1,"CHANGES   DAY")
+5→B
+Goto OP
+Lbl DH
+ClrHome
+Disp ∟STOCK(2)
+Output(1,1,"HOLDINGS  DAY")
+4→B
+Lbl OP
+For(X,1,5,1)
+Disp [A](X,B)
+End
+Output(2,2,"COMPUTERS-")
+Output(3,2,"ELECTRONIC-")
+Output(4,2,"CLOTHING-")
+Output(5,2,"MEDICAL-")
+Output(6,2,"AGRICULTURE-")
+Output(7,3,"PRESS  ENTER")
+Pause
+Goto MP
+Lbl TS
+Menu("CHOOSE STOCK","COMPUTERS",T1,"ELECTRONICS",T2,"CLOTHING",T3,"MEDICAL",T4,"AGRICULTURAL",T5,"CANCEL",MP)
+Lbl T1
+1→S
+Goto CT
+Lbl T2
+2→S
+Goto CT
+Lbl T3
+3→S
+Goto CT
+Lbl T4
+4→S
+Goto CT
+Lbl T5
+5→S
+Lbl CT
+Menu("CHOOSE TRADE","BUY STOCK",BS,"SELL STOCK",SS,"CANCEL",MP)
+Lbl BS
+ClrHome
+Output(4,3,"PLEASE  WAIT")
+∟STOCK(1)→R
+0→Y
+0→P
+While Y!=1
+If [A](S,3)=0
+Then
+-1→P
+1→Y
+End
+If R-[A](S,3)>=0
+Then
+R-[A](S,3)→R
+P+1→P
+Else
+1→Y
+End
+End
+ClrHome
+Disp ∟STOCK(2),"",[A](S,3),P
+Output(1,1,"BUY       DAY")
+Output(3,1,"STOCK PRICE-")
+Output(4,1,"CAN PURCHASE-")
+Disp "AMOUNT TO BUY?"
+Input Q
+If Q*[A](S,3)<=∟STOCK(1)
+Then
+Output(7,4,"PROCESSING")
+∟STOCK(1)-Q*[A](S,3)→∟STOCK(1)
+[A](S,4)+Q→[A](S,4)
+Else
+Output(7,1,"NOT ENOUGH MONEY")
+Pause
+Goto BS
+End
+Goto MP
+Lbl SS
+ClrHome
+Disp ∟STOCK(2),"",[A](S,3),[A](S,4)
+Output(1,1,"SELL      DAY")
+Output(3,1,"STOCK PRICE-")
+Output(4,1,"STOCKS HELD-")
+Disp "AMOUNT TO SELL?"
+Input Q
+If Q<=[A](S,4)
+Then
+Output(7,4,"PROCESSING")
+[A](S,4)-Q→[A](S,4)
+∟STOCK(1)+Q*[A](S,3)→∟STOCK(1)
+Else
+Output(7,1,"NOT ENOUGH STOCK")
+Pause
+Goto SS
+End
+Goto MP
+Lbl DA
+ClrHome
+O→U
+For(T,1,5,1)
+U+[A](T,3)*[A](T,4)→U
+End
+Disp ∟STOCK(2),"",∟STOCK(1),U,U+∟STOCK(1)
+Output(1,1,"ACCOUNT   DAAY")
+Output(3,1,"CASH AMOUNT-")
+Output(4,1,"STOCK VALUE-")
+Output(5,1,"NET WORTH-")
+Output(7,3,"PRESS  ENTER")
+Pause
+ClrHome
+Output(1,2,"STOCKS VERSION  --------------")
+If ∟STOCK(3)=0 and ∟STOCK(4)=0 and ∟STOCK(5)=0
+Then
+Output(3,6,"THIS IS        THE CLEAN       VERSION OF       STOCKS.")
+Output(8,3,"PRESS ENTER!")
+Else
+Output(3,1,"CHEATER-")
+Output(4,1,"CHALLENGE 1- OFF")
+Output(5,1,"CHALLENGE 2- OFF")
+Output(6,1,"SECRET 1-    OFF")
+Output(7,1,"SECRET 2-    OFF")
+If ∟STOCK(3)=1
+Then
+Output(3,11,"ACTIVE")
+Else
+Output(3,1,"INACTIVE")
+End
+If ∟STOCK(4)!=0 or ∟STOCK(5)!=0
+Then
+Output(4,1,"EXPERT-     ")
+End
+If (∟STOCK(4)!=0 and ∟STOCK(4)!=1) or ∟STOCK(5)!=0
+Then
+Output(5,1,"MASTER-     ")
+End
+If ∟STOCK(4)=1
+Then
+Output(4,14,"ON!")
+End
+If ∟STOCK(4)=3
+Then
+Output(4,10,"BEATEN!")
+Output(5,14,"ON!")
+End
+If ∟STOCK(4)=-(49/50)
+Then
+Output(4,10,"BEATEN!")
+Output(5,10,"BEATEN!")
+Output(6,1,"MASTER DISP-")
+Output(7,1,"FREE TRADING-ON!")
+End
+If ∟STOCK(5)=1
+Then
+Output(6,1,"MASTER DISP- ON!")
+Output(7,1,"FREE TRADING-")
+Else
+Output(8,3,"PRESS ENTER!")
+End
+End
+Pause
+If ∟STOCK(5)=1
+Then
+Output(1,1,"MASTER CODE LIST----------------CHEATER-      Y=EXPERT-    GRAPHMASTER-    CLEARMASTER DISP-VARSFREE TRADING-  ^  PRESS ENTER!")
+Pause
+End
+Goto MP
+Lbl ED
+ClrHome
+If ∟STOCK(5)=1
+Then
+Output(4,4,"GOOD SHOW")
+Else
+Output(4,3,"PLEASE  WAIT")
+End
+For(X,1,5,1)
+[A](X,3)→A
+[A](X,3)+randInt([A](X,1),[A](X,2))→[A](X,3)
+[A](X,3)-A→[A](X,5)
+If [A](X,3)<0
+Then
+0→[A](X,3)
+End
+End
+∟STOCK(2)+1→∟STOCK(2)
+If ∟STOCK(4)=-(49/50) and ∟STOCK(2)=1000
+Then
+0→∟STOCK(2)
+End
+End
+0→∟STOCK(6)
+For(X,1,5,1)
+∟STOCK(1)+[A](X,3)*[A](X,4)→∟STOCK(1)
+0→[A](X,4)
+End
+ClrHome
+If ∟STOCK(3)=1
+Then
+Disp "",0
+Else
+Disp "",∟STOCK(1)
+End
+Output(1,1,"YOUR FINAL CASH TOTAL IS")
+Output(3,1,"DOLLARS.")
+Output(5,1,"EVALUATION:")
+If ∟STOCK(1)<=1200
+Output(6,1,"TAKE UP CHECKERS")
+If ∟STOCK(1)>1200 and ∟STOCK(1)<=1400
+Output(6,1,"BIG BAD BEAR")
+If ∟STOCK(1)>1400 and ∟STOCK(1)<=1600
+Output(6,1,"BEARISH")
+If ∟STOCK(1)>1600 and ∟STOCK(1)<=1800
+Output(6,1,"OH, WELL")
+If ∟STOCK(1)>1800 and ∟STOCK(1)<=2000
+Output(6,1,"TRY HARDER")
+If ∟STOCK(1)=2000
+Output(6,1,"BROKE OUT EVEN")
+If ∟STOCK(1)>2000 and ∟STOCK(1)<=2200
+Output(6,1,"NOT BAD!")
+If ∟STOCK(1)>2200 and ∟STOCK(1)<=2400
+Output(6,1,"PRETTY SWIFT!")
+If ∟STOCK(1)>2400 and ∟STOCK(1)<=2600
+Output(6,1,"BULLISH")
+If ∟STOCK(1)>2600 and ∟STOCK(1)<2800
+Output(6,1,"BIG BAD BULL")
+If ∟STOCK(1)>=2800
+Output(6,1,"GATES IS JEALOUS")
+If ∟STOCK(3)=1
+Output(6,1,"YOU CHEATED!    ")
+Output(7,3,"PRESS  ENTER")
+Pause
+If ∟STOCK(1)>=2800 and ∟STOCK(3)=0 and ∟STOCK(4)=0
+Then
+ClrHome
+Output(1,1,"WELL, FOR YOUR  VALUABLE TIME,  YOU HAVE BEATEN STOCKS 2000.")
+Pause
+ClrHome
+Output(1,1,"NO, YOU DONT GETA TICKER TAPE   PARADE IN YOUR  HONOR, BUT YOU  DO GET ACCESS   TO...")
+Pause
+ClrHome
+Output(1,1,"BRACE           YOURSELF...")
+Pause
+Output(3,1,"CHEATER MODE!")
+Pause
+ClrHome
+Output(1,1,"WHEN A NEW GAME IS INITIALIZING,PRESS Y=...     THE MARKET WILL REALLY BE IN    YOUR FAVOR.")
+Pause
+ClrHome
+Output(1,1,"OR...")
+Pause
+Output(2,1,"YOU CAN PRESS   GRAPH AND MAKE  THE GAME HARDER AND WORK IN HALFTHE TIME!!")
+Pause
+ClrHome
+Output(1,1,"WHICHEVER PATH  YOU CHOOSE, MAKEIT A GOOD ONE!")
+Output(6,3,"PRESS  ENTER")
+Pause
+End
+If ∟STOCK(1)>=2800 and ∟STOCK(3)=0 and ∟STOCK(4)=1
+Then
+Output(1,1,"YOU ARE A TRUE  BULL,GETTING   THE GOLD IN ONLY10 DAYS.")
+Pause
+ClrHome
+Output(1,1,"BUT CAN YOU DO  IT IN 5?")
+Pause
+Output(3,1,"PRESS CLEAR AT  INITIALIZATION  SCREEN TO FIND  OUT!!")
+Pause
+End
+If ∟STOCK(1)>=2800 and ∟STOCK(3)=0 and ∟STOCK(4)=3
+Then
+ClrHome
+Output(1,1,"WELL...         YOU HAVE MOST   CERTAINLY PROVEDYOURSELF A      MASTER PLAYER.")
+Pause
+ClrHome
+Output(1,1,"WHAT ELSE IS    THERE TO DO?")
+Pause
+Output(3,1,"SADLY ENOUGH,   NOTHING.")
+Pause
+ClrHome
+Output(1,1,"YOU HAVE TRULY  EXHAUSTED THE   STOCK PROGRAM.")
+Pause
+ClrHome
+Output(1,1,"HOWEVER, BY     PRESSING VARS   BEFORE ANY OTHERSECRET IN THE   INITIALIZATION,")
+Pause
+ClrHome
+Output(1,1,"SOME SAYINGS    WILL POP UP IN  THE GAME TO     DENOTE YOUR     EXQUISITE       ABILITY.")
+Pause
+ClrHome
+Output(1,1,"ALSO, YOU NOW   MAY PLAY THE    FREE TRADING    VERSION, WITH NOLIMIT ON DAYS!")
+Pause
+ClrHome
+Output(1,1,"JUST PRESS ^ TO FREELY TRADE!")
+Pause
+ClrHome
+Output(1,1,"REST ASSURED,   YOU ARE BETTER  THAN ME, AND I  WROTE THIS GAME!")
+Pause
+ClrHome
+Output(1,1,"NOW, GO ON WITH VICTORIOUS      TRIUMPH!")
+Output(6,3,"PRESS  ENTER")
+Pause
+ClrHome
+Pause
+Output(1,1,"PSST!")
+Pause
+Output(2,1,"DID I MENTION   THAT CHEATING INFREE-TRADE MODE HAS NO PENALTY?")
+Pause
+ClrHome
+Output(1,1,"DONT TELL ANYONETHAT, OR ANY    OTHER OF THESE SECRETS!")
+Pause
+ClrHome
+Output(2,2,"NOW, GO AHEAD!")
+Output(4,2,"USE THIS GREAT      GAME!!")
+Output(7,3,"PRESS  ENTER")
+Pause
+End
+Goto ST
+Lbl EX
+If ∟STOCK(5)=1
+Then
+ClrHome
+Output(3,3,"GREAT  GAME!")
+Output(5,4,"UNTIL NEXT     TIME, STOCKS       MASTER!")
+Pause
+End
+ClrHome
+Output(2,4,"THANK  YOU      FOR  USING     STOCKS 2000!                     PLAY AGAIN     SOON... OLE!")
+Pause
+ClrHome
+Return
