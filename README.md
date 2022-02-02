@@ -1,6 +1,6 @@
 # ti-basic
 
-A collection of programs written in TI-Basic and Python for TI calculators.
+A collection of programs written in TI-Basic, Python, C, and Z80 Assembler for TI calculators.
 
 ## about
 

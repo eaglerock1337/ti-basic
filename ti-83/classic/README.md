@@ -4,7 +4,7 @@ All my applications written for the TI-83 as they were done in high school.
 
 Here is the list of applications:
 
-- AEAGLE (Starting Program)
+- AEAGLE   (Starting Program)
 - APPRUNNR (App runner)
 - EAGLMENU (Eaglemenu)
 - EMAVIRUS (Eaglemenu Anti-Virus)
